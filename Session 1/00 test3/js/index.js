@@ -264,7 +264,7 @@ scene.add( mesh21 );
 var render = function () {
   requestAnimationFrame( render );
 
-  mesh1.rotation.x = 0; //Continuously rotate the mesh 最后为10
+  mesh1.rotation.x = 10; //Continuously rotate the mesh 最后为10
   mesh1.rotation.y = 40;
   mesh1.rotation.z = 0;
 

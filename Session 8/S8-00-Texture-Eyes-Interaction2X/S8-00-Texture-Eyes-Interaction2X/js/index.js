@@ -123,7 +123,7 @@ function animate() {
 function render() {
 	console.log(mouseY)
 	for (var i = 0; i < eyesNum; i++) {
-
+/*
 		eyes[0].rotation.y = map_range(mouseX, 0, window.innerWidth, -1.14, 1.14);
 		eyes[0].rotation.x = map_range(mouseY, 0, window.innerHeight, -1.14, 1.14);
 
@@ -141,11 +141,12 @@ function render() {
 		else eyes[4].rotation.y = map_range(mouseX, 140, window.innerWidth, -1.5, 0.25);
 		if (mouseY<35) eyes[4].rotation.x = map_range(mouseY, 0, 35, 0, 0.25);
 		else eyes[4].rotation.x = map_range(mouseY, 35, window.innerHeight, 0.25, 1.14);
-
+*/
 		if (mouseX<280) eyes[5].rotation.y = map_range(mouseX, 0, 140, -0.2, 0.25);
 		else eyes[5].rotation.y = map_range(mouseX, 140, window.innerWidth, -1.8, 1.14);
-		if (mouseY<10) eyes[5].rotation.x = map_range(mouseY, 0, 300, 0, 0.25);
-		else eyes[5].rotation.x = map_range(mouseY, 35, window.innerHeight, 0.25, 1.14);
+		if (mouseY<180) eyes[5].rotation.x = map_range(mouseY, 0, 180, -0.5, 0);
+		else eyes[5].rotation.x = map_range(mouseY, 180, window.innerHeight, 0, 1.14);
+
   }
 	renderer.render( scene, camera );
 }

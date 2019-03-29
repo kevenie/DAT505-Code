@@ -41,7 +41,7 @@ function geometry(){
   var geometry5 = new THREE.CylinderGeometry( 30, 40, 100, 32 );
   var geometry6 = new THREE.CylinderGeometry( 20, 30, 100, 32);
   var geometry7 = new THREE.CylinderGeometry( 10, 20, 100, 32);
-    var geometry8 = new THREE.BoxGeometry( 1000,1000,1000);
+  var geometry8 = new THREE.BoxGeometry( 1000,1000,1000);
   var material = new THREE.MeshBasicMaterial( { color: "#FFEFD5" } );
   var texture = new THREE.TextureLoader().load('texture/tree.jpg');
   var material2 = new THREE.MeshBasicMaterial({map: texture});
@@ -51,6 +51,7 @@ function geometry(){
   var material4 = new THREE.MeshBasicMaterial({map: texture3});
 
   box = new THREE.Mesh( geometry8, material4 );
+
   box.position.z = -2000;
   cylinder = new THREE.Mesh( geometry3, material2 );
   cylinder.position.x = -50;
@@ -63,8 +64,8 @@ function geometry(){
   cylinder2.position.z = -1000;
 
   cylinder3 = new THREE.Mesh( geometry4, material2 );
-  cylinder3.position.x = -30;
-  cylinder3.position.y = -50;
+  cylinder3.position.x = -25;
+  cylinder3.position.y = -60;
   cylinder3.position.z = -1000;
 
   cylinder4 = new THREE.Mesh( geometry5, material2 );
@@ -121,6 +122,7 @@ function geometry(){
   cylinder14.position.x = 210;
   cylinder14.position.y = -5;
   cylinder14.position.z = -1000;
+
   cone = new THREE.Mesh( geometry2, material3 );
   cone.position.x = -175;
   cone.position.y = 120;
@@ -132,7 +134,7 @@ function geometry(){
   cone2.position.z = -800;
 
   cone3 = new THREE.Mesh( geometry2, material3 );
-cone3.position.x = -80;
+  cone3.position.x = -80;
   cone3.position.y = 100;
   cone3.position.z = -800;
 
@@ -163,7 +165,7 @@ cone3.position.x = -80;
 // ------------------------------------------------
 
 // Add mesh to scene
-//scene.add( mesh );
+scene.add( mesh );
 //scene.add( mesh2 );
 scene.add( box );
 scene.add( cone );
@@ -194,11 +196,11 @@ scene.add( cylinder14 );
 function render() {
   requestAnimationFrame( render );
 
-  //mesh.rotation.x += 0.01; //Continuously rotate the mesh
-  //mesh.rotation.y += 0.00;
+//  mesh.rotation.x += 0.01; //Continuously rotate the mesh
+//  mesh.rotation.y += 0.00;
 
-  //mesh2.rotation.x += 0.01;
-  //mesh2.rotation.y += 0.00;
+//  mesh2.rotation.x += 0.01;
+//  mesh2.rotation.y += 0.00;
 
   cone.rotation.y += de2ra(1);
   //cone2.rotation.y += de2ra(1);
@@ -226,9 +228,10 @@ cone6.rotation.y += de2ra(1);
 //  cone.rotation.x += ;
   // Render the scene
 
-/*  var newgroup = new THREE.Group();
+  var newgroup = new THREE.Group();
   newgroup.position.x = 0;
-  newgroup.position.z = -1000;
+  newgroup.position.y = 0;
+  newgroup.position.z = 0;
   newgroup.add(cone);
   newgroup.add(cone2);
   newgroup.add(cone3);
@@ -237,6 +240,7 @@ cone6.rotation.y += de2ra(1);
   newgroup.add(cone6);
   newgroup.add(cone7);
   newgroup.add(cone8);
+  newgroup.add(cylinder);
   newgroup.add(cylinder2);
   newgroup.add(cylinder3);
   newgroup.add(cylinder4);
@@ -249,8 +253,9 @@ cone6.rotation.y += de2ra(1);
   newgroup.add(cylinder11);
   newgroup.add(cylinder12);
   newgroup.add(cylinder13);
-  newgroup.add(cylinder14);*/
+  newgroup.add(cylinder14);
 
+  scene.add(newgroup);
 
 
 
@@ -260,73 +265,3 @@ cone6.rotation.y += de2ra(1);
 init();
 geometry();
 render();
-
-
-
-//MATERIAL 2:
-//var material = new THREE.MeshNormalMaterial();
-
-//MATERIAL 3:
-/*
-var material = new THREE.MeshLambertMaterial({
-  color: "#433F81",
-  transparent: true,
-  opacity: 1
-});
-*/
-
-//MATERIAL 4:
-//var material = new THREE.MeshPhongMaterial({shininess: 1});
-
-//MATERIAL 5 (non-shiny material):
-/*
-var material = new THREE.MeshLambertMaterial({
-color: 0xF3FFE2,
-lightMap: null,
-lightMapIntensity: 1,
-emissive: 0x000000,
-emissiveMap: null,
-emissiveIntensity: 1,
-specularMap: null
-});
-*/
-
-/*
-//MATERIAL 6 (shiny material):
-var material = new THREE.MeshPhongMaterial({
-color: 0xF3FFE2,
-specular: 0xffffff,
-shininess: 1000,
-lightMap: null,
-lightMapIntensity: 1,
-bumpMap: null,
-bumpScale: 1,
-normalMap: null,
-normalScale: 1,
-displacementMap: null,
-displacementScale: 1,
-displacementBias: 0,
-specularMap: null
-});
-*/
-
-/*
-//MATERIAL 7 (combination of shiny + non-shinny):
-var material = new THREE.MeshStandardMaterial({
-color: 0xF3FFE2,
-roughness: 0.5,
-metalness: 0.5
-});
-*/
-
-/*
-//MATERIAL 8 (physical-based material)
-var material = new THREE.MeshPhysicalMaterial({
-color: 0xF3FFE2,
-roughness: 0,
-metalness: 0.5,
-reflectivity: 0.5,
-clearCoat: 0,
-claerCoatRoughness: 0
-});
-*/

@@ -41,7 +41,7 @@ var geometry = new THREE.BoxGeometry(100, 100, 100);
 //var material = new THREE.MeshBasicMaterial( { color: "#433F81" } );
 
 //MATERIAL 2:
-//var material = new THREE.MeshNormalMaterial();
+var material8 = new THREE.MeshNormalMaterial();
 
 //MATERIAL 3:
 /*
@@ -112,7 +112,7 @@ var texture = new THREE.TextureLoader().load('texture/9.jpg');
 var material19 = new THREE.MeshBasicMaterial({map: texture});
 
 
-var mesh1 = new THREE.Mesh( geometry, material6);
+var mesh1 = new THREE.Mesh( geometry, material8);
 mesh1.position.z = -1000;
 mesh1.position.y = 100;
 

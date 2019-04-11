@@ -124,5 +124,8 @@ mouseY = event.clientY;
 ```
 * Use mouse to control perspective.
 
+#### Usage -- 2.Raycast ####
+![Image text](/pictures/ray.png)
+
 #### Links ####
 [DAT505-Code Github](https://github.com/kevenie/DAT505-Code)

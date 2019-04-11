@@ -34,6 +34,7 @@ mesh2.rotation.x = rot;
 mesh2.rotation.y = rot;
 ```
 * Set a criterion and it is convenient to change the other data.
+
 ![Image text](/pictures/cubes texture.png)
 
 #### Links ####

@@ -3,7 +3,7 @@
 #### Course Description ####
 This session teachs us how to create mesh more efficiently by setting arrays.
 
-#### Usage ####
+#### Usage -- 5*5 Cubes ####
 ```html
 <script src="build/three.js"></script>...
 ```
@@ -82,6 +82,45 @@ cubes.forEach(function(c,i){
 
 * a loop array that acts on each object.
 
+#### Usage -- Cubes with different colors and speed. ####
+```javascript
+var renderer, scene, camera;
+var cubes = [];
+var randomRotationX = [];
+var randomRotationY = [];
+var rot = 0;
+```
+```javascript
+for (var x = -35; x < 40; x += 5) {
+for (var y = -35; y < 40; y += 5) {
+    var boxGeometry = new THREE.BoxGeometry(3, 3, 3);
+    var boxMaterial = new THREE.MeshLambertMaterial({color: Math.random() * 0xFFFFFF});
+    var mesh = new THREE.Mesh(boxGeometry, boxMaterial);
 
+    mesh.position.x = x;
+    mesh.position.z = y;
+    mesh.scale.y = 0.5;
+
+    mesh.rotation.x = Math.random() * 2 *Math.PI;
+
+    var randomValueX  = (Math.random() * 0.1) - 0.05;
+    var randomValueY  = (Math.random() * 0.1) - 0.05;
+    randomRotationX.push(randomValueX);
+    randomRotationY.push(randomValueY);
+
+    scene.add(mesh);
+```
+* Start from -35 and sequentially add one every 5 pixels. 15 in a row. 15 in a line.
+* The color of the material is assigned a random color.
+* Assign the value of **randomValueX** and **randomValueY** to **randomRotationX** and **randomRotationY**. Thier range is (-0.05,0.05)
+
+```javascript
+function drawFrame(){
+cubes.forEach(function(c,i){
+  c.rotation.x += randomRotationX[i];
+  c.rotation.y += randomRotationY[i];
+})
+```
+* Act on each square。
 #### Links ####
 [DAT505-Code Github](https://github.com/kevenie/DAT505-Code)

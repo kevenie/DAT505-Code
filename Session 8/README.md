@@ -81,8 +81,9 @@ for (var i = 0; i < eyesNum; i++) {
 }
 ```
 
-* **Math.random()** means choose number  between 0 and 1.  
-* I want each square has its own random speed which is calculated in the array.
+* Set array to **Instantiate** eyes and make thier scale randomly.
+* **window.innerHeight** is the height of the document display area of the return window.
+* **window.innerWidth** is the widtht of the document display area of the return window.
 
 ```javascript
 for (var i = 0; i < eyesNum; i++) {
@@ -112,19 +113,16 @@ for (var i = 0; i < eyesNum; i++) {
 }
 renderer.render( scene, camera );
 ```
-* **Math.round()** --select integer
-* The selected number of object must a number that is a positive integer not zero.
+* Actually, this code divide the whole screen into 9 parts.
+
+![Image text](/pictures/eye.png)
+![Image text](/pictures/DA.png)
 
 ```javascript
-if (cubes[i].position.y<-50){
-  cubes[i].position.y = 30;
-  cubes[i].position.x = (Math.random() * -40) +20;
-  cubes[i].scale.x =(Math.random() * -2) + 1;
-  cubes[i].scale.y =(Math.random() * -2) + 1;
-  cubes[i].scale.z =(Math.random() * -2) + 1;
-}
+mouseX = event.clientX;
+mouseY = event.clientY;
 ```
-* Set a border for cubes. Here is the legend.
-![Image text](/pictures/eye.png)
+* Use mouse to control perspective.
+
 #### Links ####
 [DAT505-Code Github](https://github.com/kevenie/DAT505-Code)

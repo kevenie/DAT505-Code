@@ -3,7 +3,7 @@
 #### Course Description ####
 This session teachs us how to create mesh more efficiently by setting arrays.
 
-#### Usage -- 5*5 Cubes ####
+#### Usage -- 1.5*5 Cubes ####
 ```html
 <script src="build/three.js"></script>...
 ```
@@ -82,7 +82,7 @@ cubes.forEach(function(c,i){
 
 * a loop array that acts on each object.
 
-#### Usage -- Cubes with different colors and speed. ####
+#### Usage -- 2.Cubes with different colors and speed. ####
 ```javascript
 var renderer, scene, camera;
 var cubes = [];
@@ -122,5 +122,6 @@ cubes.forEach(function(c,i){
 })
 ```
 * Act on each square。
+![Image text](/pictures/random.png)
 #### Links ####
 [DAT505-Code Github](https://github.com/kevenie/DAT505-Code)

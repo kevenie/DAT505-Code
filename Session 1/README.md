@@ -90,6 +90,7 @@ mesh1.rotation.z = 0;
 * var de2ra = function(degree) {
   return degree*(Math.PI/180);
 };
+![Image text](/pictures/impossible.png)
 
 #### Usage -- 2.wireframe sphere ####
 ```javascript
@@ -116,5 +117,6 @@ var render = function () {
 };
 ```
 * += (Continuously rotate the mesh)
+![Image text](/pictures/round.png)
 #### Links ####
 [DAT505-Code Github](https://github.com/kevenie/DAT505-Code)

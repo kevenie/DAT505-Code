@@ -1,7 +1,7 @@
 ## Test8-Eye Array and Raycast ##
 
 #### Course Description ####
-This session teachs us how to create mesh more efficiently by setting arrays and
+This session teachs us how to create mesh more efficiently by setting arrays and tellus how to load modle in code.
 
 #### Usage -- 1.Eye Interaction ####
 ```javascript
@@ -125,7 +125,64 @@ mouseY = event.clientY;
 * Use mouse to control perspective.
 
 #### Usage -- 2.Raycast ####
+```javascript
+var mouse = new THREE.Vector2(), INTERSECTED;
+var	raycaster = new THREE.Raycaster();
+```
+* If the ray cast by mouse get intersected with object， the code below will work.
+
+![Image text](/pictures/ray2.png)
+```javascript
+var listener = new THREE.AudioListener();
+// create a global audio source
+var sound = new THREE.Audio( listener );
+// load a sound and set it as the Audio object's buffer
+var audioLoader = new THREE.AudioLoader();
+...
+audioLoader.load( 'audio/A.mp3', function( buffer ) {
+  sound.setBuffer( buffer );
+  sound.setLoop( false );
+  sound.setVolume( 0.5 );
+  sound.play();
+});
+```
+* Add a audio component. Adjust volume and set it only play once.
+
+```javascript
+for (var i=0; i<20; i++){
+
+var mtlLoader = new THREE.MTLLoader();
+mtlLoader.load("Blocks.mtl", function(materials){
+
+  materials.preload();
+
+  var objLoader = new THREE.OBJLoader();
+  objLoader.setMaterials(materials);
+
+    objLoader.load("hhh.obj", function(mesh){
+      mesh.traverse(function(node){
+        if( node instanceof THREE.Mesh ){
+          node.castShadow = true;
+          node.receiveShadow = true;
+        }
+      });
+      var sizeRand = Math.random() * 0.5;
+      mesh.scale.set(sizeRand,sizeRand,sizeRand);
+      mesh.position.set(Math.random()*400-200, Math.random()*400-200, Math.random()*400-200);
+      mesh.rotation.y = -Math.PI/Math.random()*4;
+
+      scene.add(mesh);
+      objects.push(mesh);
+    });
+  });
+}
+```
+* Set array because we want to create ship in random position and size.
+* **var mtlLoader** and **var objLoader** let atom to read the modle made by modeling software.
+* Add to the array so that we can access for raycasting
+
 ![Image text](/pictures/ray.png)
+
 
 #### Links ####
 [DAT505-Code Github](https://github.com/kevenie/DAT505-Code)

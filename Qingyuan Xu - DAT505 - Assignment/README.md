@@ -3,16 +3,16 @@
 
 ![Image text](https://github.com/kevenie/DAT505-Code/blob/master/Qingyuan%20Xu%20-%20DAT505%20-%20Assignment/textures/pictures/final.jpg)
 
-![Image text](/textures/pictures/2.png)
+![Image text](https://github.com/kevenie/DAT505-Code/blob/master/Qingyuan%20Xu%20-%20DAT505%20-%20Assignment/textures/pictures/2.png)
 #### Source of Inspiration ####
 
 I want to express an **eastern philosophy** that is different from western cultures.
 Oriental philosophy has a unique charm. Like ancient Chinese, Japanese and Indian artisits were wild about **hidding meanings** in the articles and paintings. I hope that the audience can be inspired by my work.
 * For instance, there was a famous painter in China called **Pa Ta Shan Jen**. In this picture, the fish shows the whites of its eyes which embodys author's cynical feelings. And I recently played a game called **SEKIRO Shadows Die Twice**. I really like the **Zen** artistic conception in it.
 
-![Image text](/textures/pictures/badashanren.jpg)
+![Image text](https://github.com/kevenie/DAT505-Code/blob/master/Qingyuan%20Xu%20-%20DAT505%20-%20Assignment/textures/pictures/badashanren.jpg)
 
-![Image text](/textures/pictures/SEKIRO.jpg)
+![Image text](https://github.com/kevenie/DAT505-Code/blob/master/Qingyuan%20Xu%20-%20DAT505%20-%20Assignment/textures/pictures/SEKIRO.jpg)
 
 ### Build ###
 ```html
@@ -88,7 +88,7 @@ for (var i=0; i<spheresNum; i++){
 }
 ```
 
-![Image text](/textures/pictures/snow.jpg)
+![Image text](https://github.com/kevenie/DAT505-Code/blob/master/Qingyuan%20Xu%20-%20DAT505%20-%20Assignment/textures/pictures/snow.jpg)
 
 * Create 250 small spheres and let them fall in the area above in random speed.
 
@@ -116,8 +116,8 @@ sphere4.overdraw = true;
 sphere4.position.set(0, 80, -180);
 scene.add(sphere4);
 ```
-![Image text](/textures/pictures/huiguang1.png)
-![Image text](/textures/pictures/huiguang2.jpg)
+![Image text](https://github.com/kevenie/DAT505-Code/blob/master/Qingyuan%20Xu%20-%20DAT505%20-%20Assignment/textures/pictures/huiguang1.png)
+![Image text](https://github.com/kevenie/DAT505-Code/blob/master/Qingyuan%20Xu%20-%20DAT505%20-%20Assignment/textures/pictures/huiguang2.jpg)
 * Create 2 spheres A and B. A is bigger than B. Use translucent texture and set the bigger sphere's transparency to 50%.
 * **Reference**: https://blog.csdn.net/sinat_30352293/article/details/78331293
 
@@ -137,11 +137,11 @@ var skyMaterial = new THREE.MeshFaceMaterial( materialArray );
 var skyBox = new THREE.Mesh( skyGeometry, skyMaterial );
 scene.add( skyBox );
 ```
-![Image text](/textures/pictures/sky.png)
+![Image text](https://github.com/kevenie/DAT505-Code/blob/master/Qingyuan%20Xu%20-%20DAT505%20-%20Assignment/textures/pictures/sky.png)
 
-![Image text](/textures/pictures/nightsky.jpg)
+![Image text](https://github.com/kevenie/DAT505-Code/blob/master/Qingyuan%20Xu%20-%20DAT505%20-%20Assignment/textures/pictures/nightsky.jpg)
 
-![Image text](/textures/pictures/nightsky.png)
+![Image text](https://github.com/kevenie/DAT505-Code/blob/master/Qingyuan%20Xu%20-%20DAT505%20-%20Assignment/textures/pictures/nightsky.png)
 * I cut the picture into **12** sections and select **6** of them.
 * But I should cut them into many **squares** rather than **rectangles**. Because cutting into squares can make them fit closer.
 * **SKY PICTURE**: I havn't found accurate source of its copyright because the websites where I found the picture claim that they don't have the copyright.
@@ -175,19 +175,19 @@ mtlLoader.load("modles/boat.mtl", function(materials){
 });
 ```
 * Here I have to say this section is the **biggest** challenge to me in the whole process. At the beginning, I want to load some models with animations. So I tried **FBXLoader** and **.js** at first.
-![Image text](/textures/pictures/fbx.png)
+![Image text](https://github.com/kevenie/DAT505-Code/blob/master/Qingyuan%20Xu%20-%20DAT505%20-%20Assignment/textures/pictures/fbx.png)
 
-![Image text](/textures/pictures/FBX.jpg)![Image text](/textures/pictures/js.jpg)
+![Image text](https://github.com/kevenie/DAT505-Code/blob/master/Qingyuan%20Xu%20-%20DAT505%20-%20Assignment/textures/pictures/FBX.jpg)![Image text](/textures/pictures/js.jpg)
 
-![Image text](/textures/pictures/choose.jpg)
+![Image text](https://github.com/kevenie/DAT505-Code/blob/master/Qingyuan%20Xu%20-%20DAT505%20-%20Assignment/textures/pictures/choose.jpg)
 
 * But the question is **Chorme** can't read local files(pictures) due to safety concerns. If I choose **IE** to run the code, the textures can be loaded, but the effect of water can't run.
 
 * Finally, I perferred to use **OBJLoader** which I am familiar with. But the problem hadn't been sovled. Chorme still didn't allow to read local pictures. I searched on the Internet but the solutions were too difficult to me and I didn't understannd them welll. So I came up with an idea: **Change it**
 
-![Image text](/textures/pictures/mtl1.jpg)
+![Image text](https://github.com/kevenie/DAT505-Code/blob/master/Qingyuan%20Xu%20-%20DAT505%20-%20Assignment/textures/pictures/mtl1.jpg)
 **into**
-![Image text](/textures/pictures/mtl2.jpg)
+![Image text](https://github.com/kevenie/DAT505-Code/blob/master/Qingyuan%20Xu%20-%20DAT505%20-%20Assignment/textures/pictures/mtl2.jpg)
 
 * Change the textures' position. And it works.
 #### Links ####

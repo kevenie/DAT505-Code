@@ -1,7 +1,7 @@
 ## Final Work by Regi B161006099 ##
 # Name:《peace》#
 
-![Image text](/textures/pictures/final.jpg)
+![Image text](https://github.com/kevenie/DAT505-Code/blob/master/Qingyuan%20Xu%20-%20DAT505%20-%20Assignment/textures/pictures/final.jpg)
 
 ![Image text](/textures/pictures/2.png)
 #### Source of Inspiration ####

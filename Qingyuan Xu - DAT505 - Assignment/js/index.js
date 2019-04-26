@@ -36,7 +36,7 @@ var speed = [];//random speed for each part of snow
     scene.background = new THREE.Color( 0xf0f0f0 );
 
     scene = new THREE.Scene();
-
+    scene.fog = new THREE.FogExp2( 0xffffff, 0.006 ); //create fog , If delete this line, the skybox will show.
     geometryy = new THREE.SphereGeometry( 0.5, 32, 32 );
     for (var i=0; i<spheresNum; i++){
       var randomValue = Math.random() * 0.5;
@@ -79,7 +79,7 @@ var speed = [];//random speed for each part of snow
     scene.add(sphere4);
 
     //skybox
-    var path = "sky/";//set path
+    var path = "textures/sky/";//set path
     var directions  = ["px", "nx", "py", "ny", "pz", "nz"];//load picture
     var format = ".jpg";//format
     var skyGeometry = new THREE.BoxGeometry( 5000, 5000, 5000 );//create a box with 5000,5000,5000

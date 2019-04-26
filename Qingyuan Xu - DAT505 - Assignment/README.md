@@ -177,7 +177,7 @@ mtlLoader.load("modles/boat.mtl", function(materials){
 * Here I have to say this section is the **biggest** challenge to me in the whole process. At the beginning, I want to load some models with animations. So I tried **FBXLoader** and **.js** at first.
 ![Image text](https://github.com/kevenie/DAT505-Code/blob/master/Qingyuan%20Xu%20-%20DAT505%20-%20Assignment/textures/pictures/fbx.png)
 
-![Image text](https://github.com/kevenie/DAT505-Code/blob/master/Qingyuan%20Xu%20-%20DAT505%20-%20Assignment/textures/pictures/FBX.jpg)![Image text](/textures/pictures/js.jpg)
+![Image text](https://github.com/kevenie/DAT505-Code/blob/master/Qingyuan%20Xu%20-%20DAT505%20-%20Assignment/textures/pictures/FBX.jpg)![Image text](https://github.com/kevenie/DAT505-Code/blob/master/Qingyuan%20Xu%20-%20DAT505%20-%20Assignment/textures/pictures/js.jpg)
 
 ![Image text](https://github.com/kevenie/DAT505-Code/blob/master/Qingyuan%20Xu%20-%20DAT505%20-%20Assignment/textures/pictures/choose.jpg)
 
